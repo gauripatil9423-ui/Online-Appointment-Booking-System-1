@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CareBook | Appointment Booking</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-icon">✚</span> CareBook</a>
+  <nav><a href="#book">Book appointment</a><a href="#appointments">Appointments</a></nav>
+</header>
+<main>
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">YOUR HEALTH, MADE SIMPLE</p>
+      <h1>Care that fits<br><span>your schedule.</span></h1>
+      <p class="hero-text">Book a consultation in minutes. Choose a service, pick a convenient time, and you're all set.</p>
+      <a class="primary-link" href="#book">Book an appointment <span>↗</span></a>
+      <div class="trust"><span class="trust-dot">✓</span> Simple booking · Clear scheduling · Less waiting</div>
+    </div>
+    <div class="hero-art" aria-label="Appointment illustration">
+      <div class="sun"></div><div class="art-card">
+        <div class="art-head"><span class="mini-logo">✚</span><span class="tiny-label">YOUR NEXT VISIT</span><span class="check">✓</span></div>
+        <div class="art-title">Appointment confirmed</div><div class="art-line"></div><div class="art-line short"></div>
+        <div class="art-date"><div class="cal"><b>28</b><small>OCT</small></div><div><b>General consultation</b><small>10:00 AM · 30 minutes</small></div></div>
+      </div>
+      <div class="floating-badge"><span>✦</span><div><b>Easy scheduling</b><small>Anytime, anywhere</small></div></div>
+      <div class="decor decor-one"></div><div class="decor decor-two"></div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div><b>01</b><span>Choose your service</span></div><div><b>02</b><span>Select a time</span></div><div><b>03</b><span>Confirm your booking</span></div>
+  </section>
+
+  <section class="booking-section" id="book">
+    <div class="section-intro"><p class="eyebrow">GET STARTED</p><h2>Book your visit</h2><p>Complete the details below to schedule your appointment.</p></div>
+    <div class="booking-layout">
+      <form id="bookingForm" class="panel">
+        <div class="panel-heading"><div class="step">01</div><div><h3>Your details</h3><p>Tell us how to reach you.</p></div></div>
+        <label for="name">Full name <span>*</span></label><input id="name" name="name" placeholder="e.g. XYZ" required maxlength="100">
+        <label for="email">Email address <span>*</span></label><input id="email" name="email" type="email" placeholder="you@example.com" required maxlength="150">
+        <label for="service">Appointment type <span>*</span></label>
+        <select id="service" name="service" required><option value="">Select a service</option><option>General Consultation</option><option>Dental Consultation</option><option>Skin Consultation</option><option>Follow-up Visit</option><option>Health Check-up</option></select>
+        <div class="two-fields"><div><label for="date">Date <span>*</span></label><input id="date" name="date" type="date" required></div><div><label for="time">Time <span>*</span></label><select id="time" name="time" required><option value="">Select time</option></select></div></div>
+        <p class="hint">Available slots: 9:00 AM–4:30 PM. All bookings are demo data.</p>
+        <button class="primary-button" type="submit">Confirm appointment <span>→</span></button>
+        <div id="formMessage" class="message" role="status" aria-live="polite"></div>
+      </form>
+      <aside class="side-note"><div class="side-icon">◷</div><h3>A time that works for you</h3><p>Choose an available time slot. The system checks for clashes before confirming your appointment.</p><div class="side-divider"></div><div class="note-row"><span>✓</span><div><b>Quick booking</b><small>Just a few details to get started</small></div></div><div class="note-row"><span>✓</span><div><b>Manage appointments</b><small>Review or cancel a booking below</small></div></div><div class="side-footer">CareBook <span>·</span> Appointment made simple</div></aside>
+    </div>
+  </section>
+
+  <section class="appointments-section" id="appointments">
+    <div class="appointments-head"><div><p class="eyebrow">YOUR SCHEDULE</p><h2>Appointments</h2><p class="section-sub">Review current bookings and cancel when needed.</p></div><button id="refreshBtn" class="secondary-button">↻ Refresh</button></div>
+    <div id="appointmentList" class="appointment-list"><div class="empty">Loading appointments…</div></div>
+  </section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-icon">✚</span> CareBook</a><span>Demo project · ASP.NET Core</span></footer>
+<script src="/app.js"></script>
+</body></html>
+
